@@ -6,7 +6,7 @@ router.get("/", (req, res, next) => {
 });
 
 //link the created files
-router.use("celebrities.routes.js")
-router.use("movies.routes.js")
+router.use(require("./celebrities.routes.js")) // ./ even in the same folder
+router.use(require("./movies.routes.js"))
 
 module.exports = router;
